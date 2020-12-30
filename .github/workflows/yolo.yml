@@ -25,7 +25,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - name: Run markdownlint with reviewdog
-        uses: reviewdog/action-markdownlint@v0.1
+        uses: prologic/action-markdownlint@v0.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          reporter: github-pr-check # Change reporter. (Only `github-pr-check` is supported at the moment).
+          reporter: github-pr-check
+          level: error
