@@ -26,3 +26,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run markdownlint with reviewdog
         uses: reviewdog/action-markdownlint@v0.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-check # Change reporter. (Only `github-pr-check` is supported at the moment).
